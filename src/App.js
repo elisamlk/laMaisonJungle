@@ -1,15 +1,13 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import Header from "./components/Header";
-import Description from "./components/Description";
 import Cart from "./components/Cart";
+import Banner from "./components/Banner";
 
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      <Description></Description>
+      <Banner></Banner>
       <Cart></Cart>
     </div>
   );
