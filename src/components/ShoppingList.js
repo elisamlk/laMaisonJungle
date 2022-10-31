@@ -1,12 +1,13 @@
 import { plantList } from "../data/plantList";
-console.log(plantList)
+// console.log(plantList);
 
 function ShoppingList() {
-  const categories = plantList.reduce(
-    (acc, plant) =>
-      acc.includes(plant.category) ? acc : acc.concat(plant.category),
-    []
-  );
+  let categoriesArray = [];
+  for (let i in plantList) {
+    categoriesArray.push(plantList[i].category);
+  }
+  let deleteDuplicates = new Set(categoriesArray);
+  let categories = [...deleteDuplicates];
 
   return (
     <div>
